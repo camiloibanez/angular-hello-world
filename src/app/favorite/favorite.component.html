@@ -1,0 +1,15 @@
+<style>
+    .bi {
+        color: blue;
+    }
+</style>
+<i class="bi" [class.bi-star-fill]="isSelected" [class.bi-star]="!isSelected" (click)="favorite()"></i>
+<br/>
+<i 
+    class="bi"
+    [ngClass]="{
+        'bi-star-fill': isSelected,
+        'bi-star': !isSelected
+    }"
+    (click)="favorite()"
+    ></i>

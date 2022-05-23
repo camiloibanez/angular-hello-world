@@ -1,0 +1,13 @@
+<div class="zippy">
+  <div class="zippy-header" [class.open]="isOpen" (click)="onClick()">
+    {{ title }}
+    <i class="bi"
+      [ngClass]="{
+        'bi-chevron-up': isOpen,
+        'bi-chevron-down': !isOpen
+      }"></i>
+  </div>
+  <div class="zippy-body" *ngIf="isOpen">
+    <ng-content></ng-content>
+  </div>
+</div>
